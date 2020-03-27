@@ -26,7 +26,7 @@ module.exports = {
             .join('dentista', 'dentista.id', '=', 'agenda.dentista_id')
             .limit(5)
             .offset((page - 1 ) * 5)
-            .select(['agenda.*', 'dentista.nome', 'dentista.cidade', 'dentista.uf']);
+            .select(['agenda.*', 'dentista.nome', 'dentista.cidade', 'dentista.uf', 'dentista.email']);
 
         response.header('X-Total-Count', count['count(*)']);
 
